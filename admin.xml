@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<listeners>
+<listener class-name="object.Listeners"/>
+</listeners>
+  <test thread-count="5" name="Curriculum Module">
+    <classes>
+      <class name="Adminlogintestcases.Curriculumcreate"/>
+      <class name="Adminlogintestcases.Assigncurriculum"/>
+      <class name="Adminlogintestcases.Materialupload"/>
+      <class name="Adminlogintestcases.Learningpath"/>
+      <class name="Adminlogintestcases.Deletecurriculum"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
