@@ -1,5 +1,8 @@
 package Adminlogintestcases;
 
+import java.util.Random;
+
+import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -21,11 +24,19 @@ public class Studentcreate extends Adminlogin {
 		
 		Thread.sleep(2000);
 		
-		modalContainer.findElement(By.id("first_name_001")).sendKeys("A First Name");
-		modalContainer.findElement(By.id("last_name_001")).sendKeys("A Last Name");
-		modalContainer.findElement(By.id("register_number")).sendKeys("AFN0014");
-		modalContainer.findElement(By.id("mobile_number")).sendKeys("1020304057");
-		modalContainer.findElement(By.id("email")).sendKeys("afirstlast14@gmail.com");
+		String studentfirstname = RandomStringUtils.randomAlphabetic(8);
+		modalContainer.findElement(By.id("first_name_001")).sendKeys(studentfirstname);
+		String studentlastname = RandomStringUtils.randomAlphabetic(8);
+		modalContainer.findElement(By.id("last_name_001")).sendKeys(studentlastname);
+		String studentregisternumber = RandomStringUtils.randomAlphabetic(8);
+		modalContainer.findElement(By.id("register_number")).sendKeys(studentregisternumber);
+		Random random = new Random(); 
+        long randomNumber = Math.abs(random.nextLong()); 
+        String randomString = Long.toString(randomNumber); 
+        String mobileno = randomString.substring(0, 10);
+		modalContainer.findElement(By.id("mobile_number")).sendKeys(mobileno);
+		String email = RandomStringUtils.randomAlphanumeric(8);
+		modalContainer.findElement(By.id("email")).sendKeys(email+"@gmail.com");
 		Select department=new Select(modalContainer.findElement(By.id("department")));
 		department.selectByValue("ECE");
 		modalContainer.findElement(By.xpath("//button[text()=' Save ']")).click();

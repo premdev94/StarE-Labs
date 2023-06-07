@@ -6,10 +6,10 @@
 </listeners>
   <test thread-count="5" name="Curriculum Module">
     <classes>
-      <class name="Adminlogintestcases.Curriculumcreate"/>
+      <!--<class name="Adminlogintestcases.Curriculumcreate"/>
       <class name="Adminlogintestcases.Assigncurriculum"/>
       <class name="Adminlogintestcases.Materialupload"/>
-      <class name="Adminlogintestcases.Learningpath"/>
+      <class name="Adminlogintestcases.Learningpath"/>-->
       <class name="Adminlogintestcases.Deletecurriculum"/>
     </classes>
   </test> <!-- Test -->

@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Adminlogintestcases.Learningpath">
+      <class name="Adminlogintestcases.Studentcreate">
         <methods>
+          <include name="createstudent"/>
           <include name="signoutstarelabs"/>
-          <include name="curriculummaterialupload"/>
           <include name="loginstarelabs"/>
         </methods>
-      </class> <!-- Adminlogintestcases.Learningpath -->
+      </class> <!-- Adminlogintestcases.Studentcreate -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
